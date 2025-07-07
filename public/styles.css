@@ -4,7 +4,7 @@ body {
   font-family: sans-serif;
 
   /* background image */
-  background: url('/images/yacht.jpg') no-repeat center center fixed;
+  background: url('/images/yacht.png') no-repeat center center fixed;
   background-size: cover;
 
   /* optional: make text more legible */
@@ -27,5 +27,5 @@ h1 {
 p {
   font-size: 1rem;
   line-height: 1.5;
-  color: #333;
+  color: #ffffff;
 }
