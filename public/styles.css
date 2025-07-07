@@ -1,9 +1,24 @@
 body {
+  margin: 0;
+  padding: 0;
   font-family: sans-serif;
-  text-align: center;
-  padding: 2rem;
+
+  /* background image */
+  background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  /* optional: make text more legible */
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+/* keep your container centered & readable */
+.content {
   max-width: 600px;
   margin: auto;
+  padding: 2rem;
+  background: rgba(0,0,0,0.5); /* semi-transparent overlay */
+  border-radius: 8px;
 }
 h1 {
   font-size: 2.5rem;
