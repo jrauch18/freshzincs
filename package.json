@@ -1,0 +1,23 @@
+{
+  "name": "freshzincs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrauch18/freshzincs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrauch18/freshzincs/issues"
+  },
+  "homepage": "https://github.com/jrauch18/freshzincs#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
