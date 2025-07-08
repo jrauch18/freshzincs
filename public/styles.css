@@ -27,7 +27,7 @@ body {
   width: 90%;
   padding: 2rem;
   /* make this semi-transparent but lighter */
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   box-sizing: border-box;
 }
