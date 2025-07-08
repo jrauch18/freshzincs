@@ -5,7 +5,7 @@ body {
   font-family: sans-serif;
   /* very light 10% black overlay over your image */
   background:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('/images/yacht.png') no-repeat center center fixed;
   background-size: cover;
 
