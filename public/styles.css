@@ -32,7 +32,7 @@ p {
 /* Hamburger menu */
 .navbar {
   position: absolute;
-  top: 1rem; right: 1rem;
+  top: 1rem; left: 1rem;
   z-index: 10;
 }
 .hamburger {
@@ -46,7 +46,7 @@ p {
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 3rem; right: 1rem;
+  top: 3rem; left: 1rem;
   background: rgba(0,0,0,0.75);
   padding: 1rem;
   border-radius: 5px;
