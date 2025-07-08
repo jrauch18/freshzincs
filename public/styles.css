@@ -111,3 +111,46 @@ h2 {
   margin-left: 1rem;
   vertical-align: middle;
 }
+
+/* Make form controls span the full width of .content and look cleaner */
+.content form input[type="text"],
+.content form input[type="email"],
+.content form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.content form input[type="text"]:focus,
+.content form input[type="email"]:focus,
+.content form textarea:focus {
+  background: rgba(255,255,255,0.2);
+  border-color: #fff;
+}
+
+/* Style the submit button */
+.content form button[type="submit"] {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem;
+  background: #28a745;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.content form button[type="submit"]:hover {
+  background: #218838;
+}
+
