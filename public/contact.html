@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Contact Us – Fresh Zincs</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <nav class="navbar">
+  <nav class="navbar">
     <div id="hamburger" class="hamburger">&#9776;</div>
     <ul id="nav-links" class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -15,19 +15,71 @@
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
+
+  <!-- Box #1: Contact form -->
   <div class="content">
     <h1>Contact Us</h1>
-    <p>Have questions or want a demo? Email us at <a href="mailto:sam@ssr-technologies.com">sam@ssr-technologies.com</a>.</p>
-    <p>Or call us at: <a href="tel:+19045098988">+1 (904) 509-8988</a></p>
+    <form id="contactForm">
+      <label>
+        Name<br/>
+        <input type="text" id="name" required />
+      </label><br/><br/>
+      <label>
+        Email<br/>
+        <input type="email" id="email" required />
+      </label><br/><br/>
+      <label>
+        Your Question / Request<br/>
+        <textarea id="message" rows="4" required></textarea>
+      </label><br/><br/>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
-   <footer class="footer">
+
+  <!-- Box #2: Static contact info -->
+  <div class="content">
+    <h2>Or reach us directly</h2>
+    <p>
+      Email: 
+      <a href="mailto:sam@ssr-technologies.com">
+        sam@ssr-technologies.com
+      </a>
+    </p>
+    <p>
+      Phone: 
+      <a href="tel:+19045098988">
+        +1 (904) 509-8988
+      </a>
+    </p>
+  </div>
+
+  <footer class="footer">
     <p>© 2025 Fresh Zincs. All rights reserved.</p>
-    <p> Patent Pending</p>
+    <p>Patent Pending</p>
   </footer>
+
   <script>
-  const ham = document.getElementById('hamburger');
-  const nav = document.getElementById('nav-links');
-  ham.addEventListener('click', ()=> nav.classList.toggle('show'));
-</script>
+    // Hamburger toggle (unchanged)
+    const ham = document.getElementById('hamburger');
+    const nav = document.getElementById('nav-links');
+    ham.addEventListener('click', () => nav.classList.toggle('show'));
+
+    // Mailto form handler
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name    = document.getElementById('name').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = `Fresh Zincs Inquiry from ${name}`;
+      const body = 
+        `Name: ${name}\n` +
+        `Email: ${email}\n\n` +
+        message;
+      window.location.href = 
+        `mailto:sam@ssr-technologies.com` +
+        `?subject=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(body)}`;
+    });
+  </script>
 </body>
 </html>
