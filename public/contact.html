@@ -65,21 +65,27 @@
     ham.addEventListener('click', () => nav.classList.toggle('show'));
 
     // Mailto form handler
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name    = document.getElementById('name').value.trim();
-      const email   = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const subject = `Fresh Zincs Inquiry from ${name}`;
-      const body = 
-        `Name: ${name}\n` +
-        `Email: ${email}\n\n` +
-        message;
-      window.location.href = 
-        `mailto:sam@ssr-technologies.com` +
-        `?subject=${encodeURIComponent(subject)}` +
-        `&body=${encodeURIComponent(body)}`;
+    document.getElementById('contactForm')
+    .addEventListener('submit', async e => {
+    e.preventDefault();
+    const form = e.target;
+    const data = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      message: form.message.value.trim()
+    };
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
     });
-  </script>
+    if (res.ok) {
+      alert('Thanks! Your message has been sent.');
+      form.reset();
+    } else {
+      alert('Sorry, something went wrong. Please try again later.');
+    }
+  });
+</script>
 </body>
 </html>
