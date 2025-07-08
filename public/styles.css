@@ -75,3 +75,13 @@ h1 {
   text-decoration: none;
   font-size: 1rem;
 }
+
+.footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9rem;
+  z-index: 1;
+}
