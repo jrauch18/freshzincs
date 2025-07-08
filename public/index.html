@@ -7,11 +7,23 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <nav class="navbar">
+  <div id="hamburger" class="hamburger">&#9776;</div>
+  <ul id="nav-links" class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
 <div class="content">
   <h1 style="text-align: center;">FreshZincs</h1>
   <p>
     The Fresh Zincs Platform is a blockchain-based marketplace for used marine vessels that provides trusted, verified data through standardized surveys, certified surveyors, and optical character recognition (OCR). Unlike conventional platforms, Fresh Zincs requires sellers to commission surveys, which are digitally signed by the network member surveyor and stored on a blockchain network (e.g., Polygon) for immutability and transparency. OCR technology extracts survey data, enabling rich search capabilities of every item of information on the survey. The platform creates a “serious buyers only” environment, reducing unqualified inquiries and in-person visits by up to 50%.
   </p>
 </div>
+<script>
+  const ham = document.getElementById('hamburger');
+  const nav = document.getElementById('nav-links');
+  ham.addEventListener('click', ()=> nav.classList.toggle('show'));
+</script>
 </body>
 </html>
