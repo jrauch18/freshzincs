@@ -93,6 +93,9 @@ h2 {
   color: #fff;
   font-size: 0.9rem;
   z-index: 1;
+  margin-top: auto;
+  position: static;
+  padding: 1rem 0;
 }
 
 .headshot {
