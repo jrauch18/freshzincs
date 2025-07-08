@@ -11,8 +11,10 @@ body {
   background-size: cover;
 
   display: flex;
-  justify-content: center;    /* center horizontally */
-  align-items: flex-start;    /* pin to the top */
+  flex-direction: column;    /* stack boxes top→bottom */
+  align-items: center;       /* center them horizontally */
+  justify-content: flex-start; 
+  gap: 2rem;                 /* 2rem of space between each box */
   min-height: 100vh;
 
   color: #fff;
