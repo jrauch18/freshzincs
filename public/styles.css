@@ -154,3 +154,12 @@ h2 {
   background: #218838;
 }
 
+.content a {
+  color: #fff;
+}
+
+/* Optional: lighten slightly on hover */
+.content a:hover {
+  color: rgba(255,255,255,0.8);
+}
+
