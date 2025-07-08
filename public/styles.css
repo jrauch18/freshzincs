@@ -1,28 +1,35 @@
-/* 1) Body: just the background image, no page-wide tint */
+/* 1) Body: darker tint + top-aligned content, horizontally centered */
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url('/images/yacht.png') no-repeat center center fixed;
+
+  /* darker 30% black overlay */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('/images/yacht.png') no-repeat center center fixed;
   background-size: cover;
+
   display: flex;
-  justify-content: center;   /* horizontal centering */
+  justify-content: center;    /* center horizontally */
+  align-items: flex-start;    /* pin to the top */
   min-height: 100vh;
+
   color: #fff;
 }
 
-/* 2) Content box: only around your <h1> + <p> */
+/* 2) Content box: unchanged, shrink-wrap around text */
 .content {
   position: relative;
   z-index: 1;
-  display: inline-block;     /* shrink-wrap to its children */
+  display: inline-block;
   max-width: 600px;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   box-sizing: border-box;
   text-align: left;
-  margin: 0;
+  margin: 1rem 0 0;  /* add a little top margin if you like */
 }
 
 /* 3) Headings */
@@ -32,7 +39,7 @@ h1 {
   margin-bottom: 1rem;
 }
 
-/* 4) Hamburger / nav */
+/* 4) Hamburger/nav */
 .navbar {
   position: absolute;
   top: 1rem;
