@@ -1,47 +1,39 @@
-/* 1) Body + very light tint overlay */
+/* 1) Body: just the background image, no page-wide tint */
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  /* very light 10% black overlay over your image */
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('/images/yacht.png') no-repeat center center fixed;
+  background: url('/images/yacht.png') no-repeat center center fixed;
   background-size: cover;
-
-  /* center all page content */
   display: flex;
-  justify-content: center;
+  align-items: center;       /* vertical centering */
+  justify-content: center;   /* horizontal centering */
   min-height: 100vh;
-
-  /* default text color */
   color: #fff;
 }
 
+/* 2) Content box: only around your <h1> + <p> */
 .content {
   position: relative;
   z-index: 1;
-
-  /* shrink‐wrap to only your <h1> and <p> */
-  display: inline-block;
-  max-width: 600px;    /* optional cap on width */
+  display: inline-block;     /* shrink-wrap to its children */
+  max-width: 600px;
   padding: 2rem;
-
   background: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   box-sizing: border-box;
-  text-align: left;    /* keeps your paragraph left-aligned inside the box */
-  margin: 0;           /* reset any automatic margins */
+  text-align: left;
+  margin: 0;
 }
 
-/* 3) Center your headings */
+/* 3) Headings */
 h1 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-/* 4) Hamburger/nav styles (unchanged) */
+/* 4) Hamburger / nav */
 .navbar {
   position: absolute;
   top: 1rem;
@@ -61,7 +53,7 @@ h1 {
   position: absolute;
   top: 3rem;
   left: 1rem;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0, 0, 0, 0.75);
   padding: 1rem;
   border-radius: 5px;
   margin: 0;
@@ -78,6 +70,7 @@ h1 {
   font-size: 1rem;
 }
 
+/* 5) Footer (outside of the tinted box) */
 .footer {
   position: absolute;
   bottom: 1rem;
