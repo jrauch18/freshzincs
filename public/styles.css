@@ -6,7 +6,7 @@ body {
   /* very light 10% black overlay over your image */
   background:
     linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url('/images/yacht.jpg') no-repeat center center fixed;
+    url('/images/yacht.png') no-repeat center center fixed;
   background-size: cover;
 
   /* center all page content */
