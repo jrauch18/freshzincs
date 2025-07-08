@@ -1,11 +1,11 @@
+/* 1) Body + very light tint overlay */
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-
-  /* layer a 20%-black tint on top of the image */
+  /* very light 10% black overlay over your image */
   background:
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url('/images/yacht.jpg') no-repeat center center fixed;
   background-size: cover;
 
@@ -19,31 +19,31 @@ body {
   color: #fff;
 }
 
-/* ensure your .content box stays above the tint */
+/* 2) Content box: lighten overlay so image shows through */
 .content {
   position: relative;
   z-index: 1;
   max-width: 600px;
   width: 90%;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.5);
+  /* make this semi-transparent but lighter */
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   box-sizing: border-box;
 }
+
+/* 3) Center your headings */
 h1 {
+  text-align: center;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  text-align: center;
 }
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #ffffff;
-}
-/* Hamburger menu */
+
+/* 4) Hamburger/nav styles (unchanged) */
 .navbar {
   position: absolute;
-  top: 1rem; left: 1rem;
+  top: 1rem;
+  left: 1rem;
   z-index: 10;
 }
 .hamburger {
@@ -57,7 +57,8 @@ p {
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 3rem; left: 1rem;
+  top: 3rem;
+  left: 1rem;
   background: rgba(0,0,0,0.75);
   padding: 1rem;
   border-radius: 5px;
