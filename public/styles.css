@@ -24,15 +24,20 @@ body {
 .content {
   position: relative;
   z-index: 1;
-  display: inline-block;
-  max-width: 600px;
+
+  /* wider box: up to 800px, or 80% of viewport */
+  display: block;
+  width: 80%;
+  max-width: 800px;
+  margin: 1rem auto;
+
   padding: 2rem;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   box-sizing: border-box;
   text-align: left;
-  margin: 1rem 0 0;  /* add a little top margin if you like */
 }
+
 
 /* 3) Headings */
 h1 {
