@@ -18,17 +18,20 @@ body {
   color: #fff;
 }
 
-/* 2) Content box: lighten overlay so image shows through */
 .content {
   position: relative;
   z-index: 1;
-  max-width: 600px;
-  width: 90%;
+
+  /* shrink‐wrap to only your <h1> and <p> */
+  display: inline-block;
+  max-width: 600px;    /* optional cap on width */
   padding: 2rem;
-  /* make this semi-transparent but lighter */
-  background: rgba(0, 0, 0, 0.3);
+
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   box-sizing: border-box;
+  text-align: left;    /* keeps your paragraph left-aligned inside the box */
+  margin: 0;           /* reset any automatic margins */
 }
 
 /* 3) Center your headings */
